@@ -1,1 +1,1 @@
-#BinSync - Comunity based waste management system
+# BinSync - Comunity based waste management system
