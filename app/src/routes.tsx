@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router";
 import LoginPage from "./pages/login";
 import RegisterPage from "./pages/register";
+import AdminLoginPage from "./pages/admin-login";
 import UserLayout from "./pages/user/layout";
 import AdminLayout from "./pages/admin/layout";
 
@@ -9,6 +10,8 @@ export default function RoutingPages() {
     <Routes>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
+
+      <Route path="/admin-login" element={<AdminLoginPage />} />
 
       <Route path="/admin" element={<AdminLayout />}></Route>
 

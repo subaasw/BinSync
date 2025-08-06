@@ -1,4 +1,4 @@
-import { ApiError, HttpMethod, RequestConfig } from "@/types/serverCall";
+import type { ApiError, HttpMethod, RequestConfig } from "@/types/serverCall";
 import { BASE_URL } from "./apiConstant";
 
 class ServerCall {

@@ -1,16 +1,15 @@
 import { useState } from "react";
-
 import { Link, useNavigate } from "react-router";
-import { Recycle } from "lucide-react";
-import UserAuthService from "@/utils/userAuth";
-import { setLocalStorage } from "@/utils/localStorage";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Recycle, Shield } from "lucide-react";
+import AdminAuthService from "@/utils/adminAuth";
+import { setLocalStorage } from "@/utils/localStorage";
 
-export default function LoginPage() {
-  const userAuth = new UserAuthService();
-
+export default function AdminLoginPage() {
+  const adminAuth = new AdminAuthService();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -46,12 +45,13 @@ export default function LoginPage() {
 
     if (!validateForm()) return;
     setIsLoading(true);
-    const response = await userAuth.login(formData);
+    const res = await adminAuth.login(formData);
 
-    if (response?.user) {
-      setLocalStorage("user", response.user);
-      navigate("/user/dashboard");
+    if (res?.admin) {
+      setLocalStorage("user", res.admin);
+      navigate("/admin/dashboard");
     }
+
     setIsLoading(false);
   };
 
@@ -61,11 +61,12 @@ export default function LoginPage() {
         <div className="mx-auto w-full max-w-md space-y-6">
           <div className="flex flex-col items-center space-y-2 text-center">
             <div className="flex items-center justify-center">
-              <Recycle className="h-10 w-10 text-user-primary" />
+              <Recycle className="h-10 w-10 text-admin-primary" />
+              <Shield className="h-6 w-6 text-admin-primary absolute" />
             </div>
-            <h1 className="text-3xl font-bold">Login to your account</h1>
+            <h1 className="text-3xl font-bold">Admin Login</h1>
             <p className="text-gray-500 dark:text-gray-400">
-              Enter your email and password to access your account
+              Enter your credentials to access the admin panel
             </p>
           </div>
           <div className="space-y-4">
@@ -75,7 +76,7 @@ export default function LoginPage() {
                 <Input
                   id="email"
                   name="email"
-                  placeholder="m@example.com"
+                  placeholder="admin@example.com"
                   required
                   type="email"
                   value={formData.email}
@@ -90,8 +91,8 @@ export default function LoginPage() {
                 <div className="flex items-center justify-between">
                   <Label htmlFor="password">Password</Label>
                   <Link
-                    to="/forgot-password"
-                    className="text-sm font-medium underline"
+                    to="/admin-forgot-password"
+                    className="text-sm font-medium underline text-admin-primary"
                   >
                     Forgot password?
                   </Link>
@@ -101,7 +102,6 @@ export default function LoginPage() {
                   name="password"
                   required
                   type="password"
-                  placeholder="password"
                   value={formData.password}
                   onChange={handleChange}
                   className={errors.password ? "border-red-500" : ""}
@@ -111,25 +111,19 @@ export default function LoginPage() {
                 )}
               </div>
               <Button
-                className="w-full bg-user-primary hover:bg-user-secondary"
+                className="w-full bg-admin-primary hover:bg-admin-secondary"
                 type="submit"
                 disabled={isLoading}
               >
-                {isLoading ? "Logging in..." : "Login"}
+                {isLoading ? "Logging in..." : "Login to Admin Panel"}
               </Button>
             </form>
             <div className="mt-4 text-center text-sm">
-              Don&apos;t have an account?{" "}
-              <Link to="/register" className="font-medium underline">
-                Register
-              </Link>
-            </div>
-            <div className="mt-2 text-center text-sm">
               <Link
-                to="/admin-login"
-                className="font-medium text-gray-600 hover:underline"
+                to="/login"
+                className="font-medium text-admin-primary hover:underline"
               >
-                Admin Login
+                Return to User Login
               </Link>
             </div>
           </div>
