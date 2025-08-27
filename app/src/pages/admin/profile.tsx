@@ -1,15 +1,5 @@
 import { useState } from "react";
-import {
-  Camera,
-  Edit,
-  Save,
-  Shield,
-  Trash2,
-  Upload,
-  User,
-  FileText,
-  Settings,
-} from "lucide-react";
+import { Camera, Edit, Save, Shield, Trash2, Upload, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
