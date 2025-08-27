@@ -5,6 +5,7 @@ import AdminLoginPage from "./pages/admin-login";
 import UserLayout from "./pages/user/layout";
 import UserDashboard from "./pages/user";
 import AdminLayout from "./pages/admin/layout";
+import SchedulePickupPage from "./pages/user/schedule-pickup";
 
 export default function RoutingPages() {
   return (
@@ -20,6 +21,7 @@ export default function RoutingPages() {
 
       <Route path="/user" element={<UserLayout />}>
         <Route index element={<UserDashboard />} />
+        <Route path="schedule-pickup" element={<SchedulePickupPage />} />
       </Route>
 
       <Route path="/" element={<Navigate to="/login" replace />} />

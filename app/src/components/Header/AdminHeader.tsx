@@ -68,7 +68,7 @@ const AdminHeader = () => {
                 className="flex items-center gap-2 font-semibold"
               >
                 <Recycle className="h-6 w-6 text-admin-primary" />
-                <span>CWMS Admin</span>
+                <span>BinSync Admin</span>
               </Link>
             </div>
             <nav className="grid gap-1 p-2">
@@ -93,10 +93,10 @@ const AdminHeader = () => {
 
         <Link
           to="/admin/dashboard"
-          className="flex items-center gap-2 font-semibold"
+          className="flex items-center gap-1 font-semibold"
         >
           <Recycle className="h-6 w-6 text-admin-primary" />
-          <span className="font-bold">CWMS</span>
+          <span className="font-bold">BinSync</span>
         </Link>
 
         <nav className="hidden md:flex ml-8 space-x-1">

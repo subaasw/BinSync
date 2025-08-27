@@ -28,7 +28,7 @@ import {
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 const navigation = [
-  { name: "Dashboard", href: "/user/dashboard", icon: Home },
+  { name: "Dashboard", href: "/user", icon: Home },
   { name: "Schedule Pickup", href: "/user/schedule-pickup", icon: Calendar },
   { name: "Report Issues", href: "/user/report-issues", icon: MessageSquare },
   {
@@ -64,11 +64,11 @@ const UserHeader = () => {
           <SheetContent side="left" className="w-64 p-0">
             <div className="flex h-16 items-center border-b px-4">
               <Link
-                to="/user/dashboard"
+                to="/user"
                 className="flex items-center gap-2 font-semibold"
               >
                 <Recycle className="h-6 w-6 text-user-primary" />
-                <span>CWMS</span>
+                <span>BinSync</span>
               </Link>
             </div>
             <nav className="grid gap-1 p-2">
@@ -93,10 +93,10 @@ const UserHeader = () => {
 
         <Link
           to="/user/dashboard"
-          className="flex items-center gap-2 font-semibold"
+          className="flex items-center gap-1 font-semibold"
         >
           <Recycle className="h-6 w-6 text-user-primary" />
-          <span className="font-bold">CWMS</span>
+          <span className="font-bold">BinSync</span>
         </Link>
 
         <nav className="hidden md:flex ml-8 space-x-1">
