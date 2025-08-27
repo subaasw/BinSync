@@ -19,6 +19,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { userAuthService } from "@/utils/userAuth";
 import convertToBase64 from "@/utils/base64Image";
+import { cn } from "@/lib/utils";
 
 const issueTypes = [
   { id: "missed_pickup", label: "Missed Pickup" },
@@ -176,7 +177,10 @@ export default function ReportIssuesPage() {
                 >
                   <SelectTrigger
                     id="issueType"
-                    className={errors.issueType ? "border-red-500" : ""}
+                    className={cn(
+                      "w-full",
+                      errors.issueType ? "border-red-500" : ""
+                    )}
                   >
                     <SelectValue placeholder="Select an issue type" />
                   </SelectTrigger>
@@ -239,7 +243,7 @@ export default function ReportIssuesPage() {
                     >
                       <img
                         src={preview || "/placeholder.svg"}
-                        alt={Issue preview ${index + 1}}
+                        alt={`Issue preview ${index + 1}`}
                         className="w-full h-full object-cover"
                       />
                       <button
