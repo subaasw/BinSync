@@ -1,4 +1,4 @@
-import database from "../config/database.js";
+import database from "../configs/db.js";
 
 export class ReportModel {
   constructor() {

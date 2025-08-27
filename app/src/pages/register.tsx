@@ -377,7 +377,7 @@ export default function RegisterPage() {
               </div>
 
               <Button
-                className="w-full bg-user-primary hover:bg-user-secondary"
+                className="w-full bg-user-primary hover:bg-secondary"
                 type="submit"
                 disabled={isLoading}
               >

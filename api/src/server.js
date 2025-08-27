@@ -3,6 +3,8 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import routers from "./routes/index.js";
 
+const PORT = process.env.PORT || 8800;
+
 const corsOptions = {
   origin: true,
   credentials: true,

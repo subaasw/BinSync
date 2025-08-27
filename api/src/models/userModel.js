@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-import database from "../config/database.js";
+import database from "../configs/db.js";
 
 class UserModel {
   constructor() {
