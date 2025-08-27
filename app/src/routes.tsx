@@ -14,6 +14,7 @@ import AdminDashboard from "./pages/admin";
 import IssuesPage from "./pages/admin/issues";
 import AdminReportsPage from "./pages/admin/reports";
 import CommunitiesPage from "./pages/admin/communities";
+import AdminProfilePage from "./pages/admin/profile";
 
 export default function RoutingPages() {
   return (
@@ -29,6 +30,7 @@ export default function RoutingPages() {
         <Route path="communities" element={<CommunitiesPage />} />
         <Route path="issues" element={<IssuesPage />} />
         <Route path="reports" element={<AdminReportsPage />} />
+        <Route path="profile" element={<AdminProfilePage />} />
       </Route>
 
       <Route path="/user" element={<UserLayout />}>
