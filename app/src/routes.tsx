@@ -3,6 +3,7 @@ import LoginPage from "./pages/login";
 import RegisterPage from "./pages/register";
 import AdminLoginPage from "./pages/admin-login";
 import UserLayout from "./pages/user/layout";
+import UserDashboard from "./pages/user";
 import AdminLayout from "./pages/admin/layout";
 
 export default function RoutingPages() {
@@ -13,9 +14,13 @@ export default function RoutingPages() {
 
       <Route path="/admin-login" element={<AdminLoginPage />} />
 
-      <Route path="/admin" element={<AdminLayout />}></Route>
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<UserDashboard />} />
+      </Route>
 
-      <Route path="/user" element={<UserLayout />}></Route>
+      <Route path="/user" element={<UserLayout />}>
+        <Route index element={<UserDashboard />} />
+      </Route>
 
       <Route path="/" element={<Navigate to="/login" replace />} />
     </Routes>
