@@ -13,6 +13,7 @@ import ProfilePage from "./pages/user/profile";
 import AdminDashboard from "./pages/admin";
 import IssuesPage from "./pages/admin/issues";
 import AdminReportsPage from "./pages/admin/reports";
+import CommunitiesPage from "./pages/admin/communities";
 
 export default function RoutingPages() {
   return (
@@ -25,6 +26,7 @@ export default function RoutingPages() {
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<AdminDashboard />} />
+        <Route path="communities" element={<CommunitiesPage />} />
         <Route path="issues" element={<IssuesPage />} />
         <Route path="reports" element={<AdminReportsPage />} />
       </Route>

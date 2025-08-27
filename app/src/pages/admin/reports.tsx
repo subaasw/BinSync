@@ -165,11 +165,11 @@ export default function AdminReportsPage() {
                     outerRadius={80}
                     dataKey="value"
                     label={({ name, percent }) =>
-                      ${name} ${(percent || 0 * 100).toFixed(0)}%
+                      `${name} ${(percent || 0 * 100).toFixed(0)}%`
                     }
                   >
                     {communityData.map((entry, index) => (
-                      <Cell key={cell-${index}} fill={entry.color} />
+                      <Cell key={`cell-${index}`} fill={entry.color} />
                     ))}
                   </Pie>
                   <Tooltip />
