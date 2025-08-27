@@ -10,11 +10,15 @@ import ReportIssuesPage from "./pages/user/report-issues";
 import PickupHistoryPage from "./pages/user/pickup-history";
 import NotificationsPage from "./pages/user/notifications";
 import ProfilePage from "./pages/user/profile";
+
 import AdminDashboard from "./pages/admin";
 import IssuesPage from "./pages/admin/issues";
 import AdminReportsPage from "./pages/admin/reports";
 import CommunitiesPage from "./pages/admin/communities";
 import AdminProfilePage from "./pages/admin/profile";
+import PickupsPage from "./pages/admin/pickups";
+import UsersPage from "./pages/admin/users";
+import AdminNotificationsPage from "./pages/admin/notifications";
 
 export default function RoutingPages() {
   return (
@@ -28,8 +32,11 @@ export default function RoutingPages() {
         <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<AdminDashboard />} />
         <Route path="communities" element={<CommunitiesPage />} />
+        <Route path="pickups" element={<PickupsPage />} />
+        <Route path="users" element={<UsersPage />} />
         <Route path="issues" element={<IssuesPage />} />
         <Route path="reports" element={<AdminReportsPage />} />
+        <Route path="notifications" element={<AdminNotificationsPage />} />
         <Route path="profile" element={<AdminProfilePage />} />
       </Route>
 

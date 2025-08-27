@@ -359,64 +359,6 @@ export default function AdminProfilePage() {
             </div>
           </CardContent>
         </Card>
-
-        {/* Activity Stats Card */}
-        <Card className="md:col-span-3">
-          <CardHeader>
-            <CardTitle>Admin Activity</CardTitle>
-            <CardDescription>
-              Your recent administrative activities
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <div className="rounded-lg border p-4">
-                <div className="flex items-center gap-4">
-                  <div className="rounded-full bg-admin-muted p-2">
-                    <User className="h-4 w-4 text-admin-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium">New User Approved</p>
-                    <p className="text-sm text-muted-foreground">
-                      You approved a new user registration
-                    </p>
-                    <p className="text-xs text-gray-400">2 hours ago</p>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-lg border p-4">
-                <div className="flex items-center gap-4">
-                  <div className="rounded-full bg-admin-muted p-2">
-                    <FileText className="h-4 w-4 text-admin-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium">Report Generated</p>
-                    <p className="text-sm text-muted-foreground">
-                      You generated a monthly waste collection report
-                    </p>
-                    <p className="text-xs text-gray-400">
-                      Yesterday at 3:45 PM
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="rounded-lg border p-4">
-                <div className="flex items-center gap-4">
-                  <div className="rounded-full bg-admin-muted p-2">
-                    <Settings className="h-4 w-4 text-admin-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium">System Settings Updated</p>
-                    <p className="text-sm text-muted-foreground">
-                      You updated the notification settings
-                    </p>
-                    <p className="text-xs text-gray-400">3 days ago</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </div>
   );

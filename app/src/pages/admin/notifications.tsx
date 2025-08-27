@@ -141,7 +141,7 @@ const usersData = [
   },
 ];
 
-export default function NotificationsPage() {
+export default function AdminNotificationsPage() {
   const [activeTab, setActiveTab] = useState("send");
   const [searchQuery, setSearchQuery] = useState("");
   const [typeFilter, setTypeFilter] = useState<string>("");
