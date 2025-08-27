@@ -9,6 +9,7 @@ import SchedulePickupPage from "./pages/user/schedule-pickup";
 import ReportIssuesPage from "./pages/user/report-issues";
 import PickupHistoryPage from "./pages/user/pickup-history";
 import NotificationsPage from "./pages/user/notifications";
+import ProfilePage from "./pages/user/profile";
 
 export default function RoutingPages() {
   return (
@@ -28,6 +29,7 @@ export default function RoutingPages() {
         <Route path="report-issues" element={<ReportIssuesPage />} />
         <Route path="pickup-history" element={<PickupHistoryPage />} />
         <Route path="notifications" element={<NotificationsPage />} />
+        <Route path="profile" element={<ProfilePage />} />
       </Route>
 
       <Route path="/" element={<Navigate to="/login" replace />} />
