@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Inter Variable";
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 @theme {
   --color-user-primary: #4caf50;
   --color-user-secondary: #45a049;
@@ -115,6 +122,8 @@ body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-feature-settings: "rlig" 1, "calt" 1;
+
+  font-family: "Inter Variable", "SF Pro Display", sans-serif;
 }
 
 .leaflet-container {

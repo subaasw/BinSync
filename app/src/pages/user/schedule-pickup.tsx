@@ -268,7 +268,7 @@ export default function SchedulePickupPage() {
                   placeholder="Any special instructions or details about your waste pickup"
                   value={additionalNotes}
                   onChange={(e) => setAdditionalNotes(e.target.value)}
-                  className="min-h-[100px]"
+                  className="min-h-[100px] border-user-accent"
                 />
               </div>
             </CardContent>
