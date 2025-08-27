@@ -61,7 +61,7 @@ export default function ProfilePage() {
   const saveProfile = async () => {
     setIsLoading(true);
 
-    const response = await userAuthService.updateProfile({
+    await userAuthService.updateProfile({
       fullName: profileData.fullName,
       address: profileData.address,
       contactNumber: profileData.contactNumber,

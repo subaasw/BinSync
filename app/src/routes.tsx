@@ -10,6 +10,9 @@ import ReportIssuesPage from "./pages/user/report-issues";
 import PickupHistoryPage from "./pages/user/pickup-history";
 import NotificationsPage from "./pages/user/notifications";
 import ProfilePage from "./pages/user/profile";
+import AdminDashboard from "./pages/admin";
+import IssuesPage from "./pages/admin/issues";
+import AdminReportsPage from "./pages/admin/reports";
 
 export default function RoutingPages() {
   return (
@@ -20,11 +23,15 @@ export default function RoutingPages() {
       <Route path="/admin-login" element={<AdminLoginPage />} />
 
       <Route path="/admin" element={<AdminLayout />}>
-        <Route index element={<UserDashboard />} />
+        <Route index element={<Navigate to="/dashboard" replace />} />
+        <Route path="dashboard" element={<AdminDashboard />} />
+        <Route path="issues" element={<IssuesPage />} />
+        <Route path="reports" element={<AdminReportsPage />} />
       </Route>
 
       <Route path="/user" element={<UserLayout />}>
-        <Route index element={<UserDashboard />} />
+        <Route index element={<Navigate to="/dashboard" replace />} />
+        <Route path="dashboard" element={<UserDashboard />} />
         <Route path="schedule-pickup" element={<SchedulePickupPage />} />
         <Route path="report-issues" element={<ReportIssuesPage />} />
         <Route path="pickup-history" element={<PickupHistoryPage />} />

@@ -28,7 +28,7 @@ import {
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 const navigation = [
-  { name: "Dashboard", href: "/user", icon: Home },
+  { name: "Dashboard", href: "/user/dashboard", icon: Home },
   { name: "Schedule Pickup", href: "/user/schedule-pickup", icon: Calendar },
   { name: "Report Issues", href: "/user/report-issues", icon: MessageSquare },
   {
