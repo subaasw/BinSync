@@ -19,6 +19,7 @@ import AdminProfilePage from "./pages/admin/profile";
 import PickupsPage from "./pages/admin/pickups";
 import UsersPage from "./pages/admin/users";
 import AdminNotificationsPage from "./pages/admin/notifications";
+import NotFoundPage from "./pages/404Page";
 
 export default function RoutingPages() {
   return (
@@ -51,6 +52,7 @@ export default function RoutingPages() {
       </Route>
 
       <Route path="/" element={<Navigate to="/login" replace />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }
