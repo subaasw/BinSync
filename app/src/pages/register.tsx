@@ -15,6 +15,7 @@ import UserAuthService from "@/utils/userAuth";
 import { setLocalStorage } from "@/utils/localStorage";
 import convertToBase64 from "@/utils/base64Image";
 import { Link, useNavigate } from "react-router";
+import { cn } from "@/lib/utils";
 
 export default function RegisterPage() {
   const userAuth = new UserAuthService();
@@ -210,7 +211,7 @@ export default function RegisterPage() {
                 <Input
                   id="fullName"
                   name="fullName"
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                   required
                   value={formData.fullName}
                   onChange={handleChange}
@@ -279,7 +280,7 @@ export default function RegisterPage() {
                 <Input
                   id="contactNumber"
                   name="contactNumber"
-                  placeholder="+60123456789"
+                  placeholder="+9812345678"
                   required
                   value={formData.contactNumber}
                   onChange={handleChange}
@@ -297,7 +298,10 @@ export default function RegisterPage() {
                   value={formData.community}
                 >
                   <SelectTrigger
-                    className={errors.community ? "border-red-500" : ""}
+                    className={cn(
+                      "w-full",
+                      errors.community ? "border-red-500" : ""
+                    )}
                   >
                     <SelectValue placeholder="Select a community" />
                   </SelectTrigger>
